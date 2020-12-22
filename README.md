@@ -3,6 +3,7 @@ This is a fork of _tarteaucitron.js_. The goal of this for is to add the followi
 - Add the hability to use it in webpack.
 - Correction of 'use strict'.
 - Add the possibility to change the icon.
+- Permit declaration of mandatory plugin.
 
 [![](https://data.jsdelivr.com/v1/package/gh/AmauriC/tarteaucitron.js/badge)](https://www.jsdelivr.com/package/gh/AmauriC/tarteaucitron.js)
 [![npm](https://img.shields.io/npm/v/tarteaucitronjs.svg)](https://www.npmjs.com/package/tarteaucitronjs) [![GitHub contributors](https://img.shields.io/github/contributors/AmauriC/tarteaucitron.js.svg)](https://github.com/AmauriC/tarteaucitron.js/graphs/contributors)

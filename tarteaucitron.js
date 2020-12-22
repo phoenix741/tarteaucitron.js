@@ -709,14 +709,25 @@
                 }
 
                 html += '   </div>';
-                html += '   <div class="tarteaucitronAsk">';
-                html += '       <button type="button" id="' + service.key + 'Allowed" class="tarteaucitronAllow">';
-                html += '           <span class="tarteaucitronCheck"></span> ' + tarteaucitronjs.lang.allow;
-                html += '       </button> ';
-                html += '       <button type="button" id="' + service.key + 'Denied" class="tarteaucitronDeny">';
-                html += '           <span class="tarteaucitronCross"></span> ' + tarteaucitronjs.lang.deny;
-                html += '       </button>';
-                html += '   </div>';
+                if (service.mandatory) {
+                        html += '   <div class="tarteaucitronAsk">';
+                        html += '       <button type="button" class="tarteaucitronAllow" tabindex="-1">';
+                        html += '           <span class="tarteaucitronCheck"></span> ' + tarteaucitronjs.lang.allow;
+                        html += '       </button> ';
+                        html += '       <button type="button" class="tarteaucitronDeny" style="visibility:hidden" tabindex="-1">';
+                        html += '           <span class="tarteaucitronCross"></span> ' + tarteaucitronjs.lang.deny;
+                        html += '       </button> ';
+                        html += '   </div>';
+                } else {
+                    html += '   <div class="tarteaucitronAsk">';
+                    html += '       <button type="button" id="' + service.key + 'Allowed" class="tarteaucitronAllow">';
+                    html += '           <span class="tarteaucitronCheck"></span> ' + tarteaucitronjs.lang.allow;
+                    html += '       </button> ';
+                    html += '       <button type="button" id="' + service.key + 'Denied" class="tarteaucitronDeny">';
+                    html += '           <span class="tarteaucitronCross"></span> ' + tarteaucitronjs.lang.deny;
+                    html += '       </button>';
+                    html += '   </div>';
+                }
                 html += '</li>';
 
                 tarteaucitronjs.userInterface.css('tarteaucitronServicesTitle_' + service.type, 'display', 'block');
